@@ -11,9 +11,9 @@ import {
 const router = new Hono();
 
 router.post('/', createPosition);
+router.get('/hierarchy', getHierarchy);
 router.put('/:id', updatePosition);
 router.get('/:id', getPosition);
-router.get('/hierarchy', getHierarchy);
 router.get('/:id/children', getChildren);
 router.delete('/:id', deletePosition);
 
